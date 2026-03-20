@@ -55,7 +55,7 @@ const char status_html[] PROGMEM = R"rawliteral(
       .card-center{text-align:center;}
       h1{color:#3ecf6a; margin-bottom:1.2rem; font-size:1.4rem;}
       h2{color:#a0a0b0; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:1rem; padding-bottom:0.6rem; border-bottom:1px solid #2a2d3e;}
-      .status{background:#0f1117; border:1px solid #2a2d3e; border-radius:8px; padding:1rem; margin-bottom:1.2rem;}
+      .status{background:#0f1117; border:1px solid #2a2d3e; border-radius:8px; padding:1rem;}
       .label{font-size:12px; color:#555868; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.3rem;}
       .value{font-size:16px; color:#a0a0b0;}
       .value strong{color:#e0e0e0;}
@@ -82,7 +82,6 @@ const char status_html[] PROGMEM = R"rawliteral(
 
       <!-- Status WiFi -->
       <div class="card card-center">
-        <h1>✅ WiFi Conectado</h1>
         <div class="status">
           <div class="label">Rede</div>
           <div class="value"><strong>%SSID%</strong></div>
@@ -97,7 +96,7 @@ const char status_html[] PROGMEM = R"rawliteral(
 
       <!-- Documentação da API REST -->
       <div class="card">
-        <h2>📡 API REST — Referência</h2>
+        <h2>API HTTP</h2>
 
         <div class="endpoint">
           <span class="method get">GET</span>
