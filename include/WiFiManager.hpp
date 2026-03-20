@@ -1,5 +1,5 @@
-#ifndef WIFIMANAGER_H
-#define WIFIMANAGER_H
+#ifndef WIFIMANAGER_HPP
+#define WIFIMANAGER_HPP
 
 #include <Arduino.h>
 #include <WiFi.h>
@@ -42,4 +42,4 @@ private:
     static WiFiManager* instance;
 };
 
-#endif // WIFIMANAGER_H
+#endif // WIFIMANAGER_HPP

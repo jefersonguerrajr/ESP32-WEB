@@ -1,5 +1,5 @@
-#include "WiFiManager.h"
-#include "webpages.h"
+#include "WiFiManager.hpp"
+#include "webpages.hpp"
 
 // Initialize static instance pointer
 WiFiManager* WiFiManager::instance = nullptr;

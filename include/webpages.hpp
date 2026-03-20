@@ -1,5 +1,5 @@
-#ifndef WEBPAGES_H
-#define WEBPAGES_H
+#ifndef WEBPAGES_HPP
+#define WEBPAGES_HPP
 
 #include <Arduino.h>
 
@@ -167,4 +167,4 @@ const char processing_html[] PROGMEM = R"rawliteral(
 </html>
 )rawliteral";
 
-#endif // WEBPAGES_H
+#endif // WEBPAGES_HPP

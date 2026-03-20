@@ -1,5 +1,5 @@
-#ifndef LED_CONTROLLER_H
-#define LED_CONTROLLER_H
+#ifndef LED_CONTROLLER_HPP
+#define LED_CONTROLLER_HPP
 
 #include <Arduino.h>
 #include <WebServer.h>
@@ -20,4 +20,4 @@ private:
     void sendStateResponse(WebServer& server);
 };
 
-#endif // LED_CONTROLLER_H
+#endif // LED_CONTROLLER_HPP

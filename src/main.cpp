@@ -1,6 +1,6 @@
 #include <Arduino.h>
-#include "WiFiManager.h"
-#include "api/LedController.h"
+#include "WiFiManager.hpp"
+#include "api/LedController.hpp"
 
 WiFiManager wifiManager;
 LedController ledController(LED_PIN);
