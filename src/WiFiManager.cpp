@@ -42,6 +42,13 @@ void WiFiManager::checkResetButton() {
             resetButtonPressTime = millis();
         } else if (millis() - resetButtonPressTime > 3000) {
             Serial.println("Botão de reset pressionado - Limpando WiFi");
+            digitalWrite(LED_PIN, HIGH);
+            int c = 0;
+            while(c < 6){
+                digitalWrite(LED_PIN, !digitalRead(LED_PIN));
+                delay(200);
+                c++;
+            }
             preferences.begin("wifi-config", false);
             preferences.clear();
             preferences.end();
@@ -59,7 +66,8 @@ void WiFiManager::handleRoot() {
     } else {
         String html = String(status_html);
         html.replace("%SSID%", WiFi.SSID());
-        html.replace("%IP%", WiFi.localIP().toString());
+        html.replace("%MAC%", WiFi.macAddress());
+        html.replace("%RSSI%", String(WiFi.RSSI()));
         server.send(200, "text/html", html);
     }
 }
@@ -165,7 +173,7 @@ void WiFiManager::startStationMode(String ssid, String password) {
     if (WiFi.status() == WL_CONNECTED) {
         Serial.println("\nWiFi conectado!");
         Serial.println("IP: " + WiFi.localIP().toString());
-        digitalWrite(LED_PIN, HIGH);
+        digitalWrite(LED_PIN, LOW);
         
         server.on("/", handleRootWrapper);
         server.on("/reset", handleResetWrapper);

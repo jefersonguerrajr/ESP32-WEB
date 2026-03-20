@@ -16,6 +16,7 @@ public:
     void begin();
     void handleClient();
     void checkResetButton();
+    WebServer& getServer() { return server; }
 
 private:
     WebServer server;
@@ -27,7 +28,6 @@ private:
     void handleRoot();
     void handleSave();
     void handleReset();
-    void handleToggleLED();
 
     // Mode functions
     void startAPMode();
@@ -37,7 +37,6 @@ private:
     static void handleRootWrapper();
     static void handleSaveWrapper();
     static void handleResetWrapper();
-    static void handleToggleLEDWrapper();
 
     // Static instance pointer for callbacks
     static WiFiManager* instance;
